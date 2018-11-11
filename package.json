@@ -1,0 +1,21 @@
+{
+  "name": "twinfieldtask",
+  "version": "1.0.0",
+  "description": "Home Task for Twinfield company",
+  "main": "",
+  "scripts": {
+    "test": "./node_modules/protractor/bin/protractor protractor-conf.js",
+    "setup": "npm install && ./node_modules/protractor/bin/webdriver-manager update",
+    "start": "./node_modules/protractor/bin/webdriver-manager start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epishev/twinfieldTask.git"
+  },
+  "author": "YepishevY",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor": "^5.4.1"
+  }
+}

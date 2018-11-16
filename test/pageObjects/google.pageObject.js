@@ -1,7 +1,7 @@
 class GooglePage {
     constructor() {
-        this.input = browser.driver.findElement(by.css('input#lst-ib'));
-        this.searchButton = browser.driver.findElement(by.css('input[name=btnK]'));
+        this.input = element(by.css('input#lst-ib'));
+        this.searchButton = element(by.css('input[name=btnK]'));
         this.resultLinkCSSLocator = 'div.TbwUpd';
     }
 
@@ -12,7 +12,7 @@ class GooglePage {
 
     async getAllLinks() {
         let results = [];
-        let linksArray = await browser.driver.findElements(by.css(this.resultLinkCSSLocator));
+        let linksArray = await element.all(by.css(this.resultLinkCSSLocator));
         for (let i = 0; i < linksArray.length; i++) {
             results.push(await linksArray[i].getText());
         }
